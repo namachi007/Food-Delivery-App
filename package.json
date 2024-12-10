@@ -1,0 +1,11 @@
+{
+  "name": "food-delivery-app",
+  "version": "1.0.0",
+  "description": "Where you can order delicious food from favourite restaurant",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Namasivayam M",
+  "license": "ISC"
+}
