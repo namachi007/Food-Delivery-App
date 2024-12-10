@@ -1,3 +1,86 @@
 #root {
-    background-color: tomato;
+  
+}
+.logo {
+    width: 120px;
+    height: 120px;
+}
+.headingDiv {
+    display: flex;
+    justify-content: space-between;
+    border: solid black 1px;
+    margin: 0px 10px;   
+    align-items: center;
+}
+.logoDiv {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+.logoDiv > h3 {
+    margin-left: 20px;
+    font-family:'poppins';
+}
+.navItems > ul {
+    display: flex;
+     margin-right: 50px;
+    
+}
+
+.navItems > ul > li {
+    padding: 20px;
+    list-style-type: none;
+    font-size: 19px;
+}
+
+.rescardImg {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.rescardImg > img {
+    height: 200px;
+    width: 300px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.resCard {
+    margin: 100px 50px ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.rescardMain {
+    width: 400px;
+    height: 400px;
+    background-color: #f0f0f0;
+    margin: 20px 40px;
+}
+
+.resContent {
+    margin: 0px 60px;
+}
+
+.resContent > * {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+.rescardMain:hover {
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.serachBox > input {
+    height: 50px;
+    width: 80%;
+    font-family: "Roboto", sans-serif;
+    border-radius: 5px;
+}
+
+.serachBox {
+    margin-top: 30px;
+    display:flex ;
+    justify-content: center;
 }
