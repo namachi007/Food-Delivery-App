@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: local('Gilroy-Bold'), url(./src/fonts/Gilroy-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Gilroy-Medium';
+  src: local('Gilroy-Medium'), url(./src/fonts/Gilroy-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: local('Gilroy-Light'), url(./src/fonts/Gilroy-Light.ttf) format('truetype');
+}
+
+
 #root {
   
 }
@@ -33,48 +49,159 @@
     font-size: 19px;
 }
 
-.rescardImg {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
+
+
+
+
+.rescardImg  {
+    
+    border-radius: 20px;
+    margin: 10px 0px ;
+} 
 
 .rescardImg > img {
-    height: 200px;
-    width: 300px;
-    border-radius: 20px;
-    margin-top: 30px;
+    border-radius: 30px;
 }
 
 .resCard {
-    margin: 100px 50px ;
+    margin: 0px 50px ;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+   
 }
 
 .rescardMain {
-    width: 400px;
-    height: 400px;
-    background-color: #f0f0f0;
-    margin: 20px 40px;
+    width: 300px;
+    
+    margin: 0px 30px;
+    transition: transform 0.3s ease;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 .resContent {
-    margin: 0px 60px;
+    margin: 0px 13px;
+  
+}
+
+.resCard a {
+    text-decoration: none;
+  color: inherit;
+}
+
+.contnt > p {
+    color: rgb(86, 86, 86);
+}
+
+.shimmerMenu {
+    display: flex;
+    margin: 100px 0px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shimmerSearchbox {
+    background-color: rgb(225, 224, 223);
+    width: 90px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 80px 0px;
+}
+
+.shimmerContn {
+    background-color: rgb(225, 224, 223);
+    width: 700px;
+    height: 35px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+
+.shimmerBdy {
+    margin: 70px;
+    display: flex;
+    width: 700px;
+    justify-content: space-between;
+}
+
+.shimmerbdy1 {
+    width: 400px;
+}
+
+
+.shimmerBDY {
+    margin: 10px 0px;
+    background-color: rgb(225, 224, 223);
+    width: 250px;
+    height: 20px;
+    border-radius: 13px;
+}
+.shimmerBDY1 {
+   margin-bottom: 50px;
+    background-color: rgb(225, 224, 223);
+    width: 160px;
+    height: 13px;
+    border-radius: 13px;
+}
+
+.shimmerBDY2 {
+   margin-bottom: 30px;
+    background-color: rgb(225, 224, 223);
+    width: 80px;
+    height: 11px;
+    border-radius: 13px;
+}
+
+.shimmerBDY3 {
+   
+    background-color: rgb(225, 224, 223);
+    width: 450px;
+    height: 10px;
+    border-radius: 10px;
+    margin: 25px 0px;
+}
+
+.shimmerbdy2 {
+    background-color: rgb(225, 224, 223);
+    width: 200px;
+    height: 160px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.shimmer-box {
+    background-color: rgb(225, 224, 223);
+    height: 190px;
+    width: 700px;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+
+.shimmer-menu {
+    background-color: rgb(225, 224, 223);
+    width: 200px;
+    height: 35px;
+    border-radius: 10px;
+    margin-right: 500px;
 }
 
 .resContent > * {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+
 }
 .rescardMain:hover {
     cursor: pointer;
-    border: 1px solid black;
+    border-radius: 20px;
+    transform: scale(0.96);
+    
 }
 
 .serachBox > input {
     height: 50px;
     width: 80%;
+    font-size: 18px;
     font-family: "Roboto", sans-serif;
     border-radius: 5px;
 }
@@ -83,4 +210,333 @@
     margin-top: 30px;
     display:flex ;
     justify-content: center;
+}
+
+.serachBox > input::placeholder {
+    font-size: 18px; 
+    color: gray; 
+}
+
+.serachBox > input {
+    width: 1070px;
+    border: #898888 0.5px solid;
+    border-radius: 14px;
+}
+
+.headerLink a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.sortBy {
+    border: rgba(2, 6, 12, 0.15) solid 1px;
+    height: 40px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    border-radius: 20px;
+    padding: 6px;
+}
+
+.innerSortby {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    
+}
+.logoSearchsvg {
+    
+    position: absolute;
+    right: 25.5%;
+    top: 21.5%;
+}
+.innersortSvg {
+    margin-left: 10px;
+}
+
+.sortbtn {
+    cursor: pointer;
+}
+
+.shimmerInner {
+    margin: 100px 50px ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.shimmerdiv {
+    width: 300px;
+    height: 300px;
+    margin: 34px 50px;
+    
+}
+.shimmerdiv > * {
+    background-color:rgb(225, 224, 223)
+}
+.shimmerImg {
+    border-radius: 19px;
+    height: 190px;
+    width: 300px;
+}
+
+.shimmerName {
+    width: 140px;
+    height: 12px;
+    margin-top: 30px;
+}
+
+.shimmerContent {
+    width: 100px;
+    height: 12px;
+    margin-top: 10px;
+}
+
+
+.menu > * {
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-style: normal;
+    text-align: left;
+    font-size: 1rem;
+    opacity: 1;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menuHeader {
+    
+    
+    
+    margin: 70px 0px;
+}
+
+.menuHeader2 {
+    width: 800px;
+}
+
+.menuResInfo{ 
+    margin-top: 50px;
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgb(175, 175, 175), 
+                0 10px 16px rgb(175, 175, 175); 
+    border-radius: 20px; 
+    background-color: #fff;
+    margin: 20px; 
+
+}
+
+.menuResInfo > * {
+    font-family: Arial;
+    font-size: 17px;
+    color: rgb(61, 61, 61);
+}
+.menuResName {
+    margin-left: 20px;
+}
+
+.menuResName {
+    font-size: 18px;
+}
+
+.menuBody{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+.menuBody3 {
+    margin: 0px;
+}
+
+.menuBodyHead{ 
+
+}
+.menuserachBox {
+    margin: 30px 0px;
+    width: 100%;
+    margin-left: 567px;
+}
+
+.menuserachBox > input  { 
+   width: 765px;
+   height: 50px;
+   background-color: rgb(238, 237, 237);
+   border: none;
+    outline: none; 
+    text-align: center; 
+    font-size: 16px; 
+    border-radius: 15px;
+}
+
+.menuserachBox input::placeholder {
+    text-align: center;
+    color: #aaa;
+    font-size: 15px;
+    
+}
+
+.menuserachBox {
+}
+
+.thin-line {
+    height: 1px;
+    background-color: #e0e0e0; 
+    margin-top: 20px ; 
+    width: 760px;
+    margin-right: 25px;
+}
+
+
+.menuRes{
+    margin: 50px 0px;
+    width: 100%;
+}
+
+.menuRes1 > button {
+    width: 500px;
+    height: 300px;
+}
+
+
+
+
+
+.veg {
+    border: 2px solid rgb(0, 157, 63);
+    border-radius: 7px;
+    width: 20px;
+    height: 20px;
+}
+
+.veg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.circle {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.green {
+  background-color: green;
+}
+
+
+.square {
+  width: 18px;
+    height: 18px;
+  border: 2px solid red;
+  border-radius: 7px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 10px solid red;
+  position: absolute;
+  
+}
+
+
+
+
+
+.menuRes1{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.menuRes2 {
+
+ 
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+  width: 760px;
+}
+.resItemIn {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.titleMenu {
+    display: flex;
+    justify-content: space-between;
+    width: 760px;
+}
+
+.menuRes3 {
+    width: 760px;
+    margin: 50px 0px;
+}
+
+.menuitemName{ 
+    color: #000000cb;
+    margin: 3px 0px;
+    font-weight:bolder;
+}
+
+.menuRating {
+    /* margin-left: 4px; */
+    color: #16872e;
+    font-size: 15px;
+}
+
+.menuPrice {
+    margin: 0px;
+    /* margin-left: 5px; */
+    color: #000000;
+}
+
+.menuRating > span {
+    color: #636363;
+}
+
+
+.menuDes {
+    color: #646363;
+    width: 500px;
+    font-size: 17px;
+}
+
+.menuItems {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 8px;
+}
+
+.menuImg{
+    margin-top: 10px;
+}
+.menuImg > img {
+    width: 170px;
+    height: 170px;
+    border-radius: 12px;
+   margin-top: 20px;
+}
+
+.menuDetails {
+  flex: 1; 
 }

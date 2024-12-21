@@ -1,48 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import logoImg from "./Images/logoImg.png";
-
-const Heading = () => {
-    return (
-      <div className="headingDiv">
-        <div className="logoDiv">
-          <img src={logoImg} className="logo" />
-          <h3>YumRun</h3>
-        </div>
-        <div className="navItems">
-          <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Conatct Us</li>
-            <li>Cart</li>
-          </ul>
-        </div>
-      </div>
-    );
-};
-
-const Rescard = (props) => {
-    const { resData }  = props;
-    const { name, cloudinaryImageId, cuisines, areaName, avgRating, sla } = resData?.info || {};
-  
-    return (
-      <div className="rescardMain">
-        <div className="rescardImg">
-          <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${cloudinaryImageId}`} alt={name} />
-        </div>
-        <div className="resContent">
-            <h3>{name}</h3>
-            <p>Rating:{avgRating}</p>
-            <p>Review: Best hotel So far</p>
-            <p>29 minutes</p>
-        </div>
-      </div>
-    );
-};
-
-
-//its list of restaurants
-
 const resList = [
   {
     info: {
@@ -1331,29 +1286,4 @@ const resList = [
   },
 ];
 
-const Body = () => {
-  return (
-    <div className="mainBody">
-      <div className="serachBox">
-        <input placeholder="Search for restaurants and foods"></input>
-      </div>
-      <div className="resCard">
-        {resList.map((restaurant) => (
-            <Rescard resData = {restaurant}/>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const App = () => {
-    return (
-      <div className="app">
-        <Heading />
-        <Body />
-      </div>
-    );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));;
-root.render(App());
+export default resList
