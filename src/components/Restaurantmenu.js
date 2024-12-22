@@ -54,7 +54,7 @@ const Restaurantmenu = () => {
       </div>
       <div className="menuBody">
         <div className="menuBody2">
-          <div className="menuBodyHead">
+          <div className="menuBodyHead text-xl ">
             <h4>-- M E N U --</h4>
           </div>
         </div>

@@ -106,7 +106,7 @@ console.log(inputText);
       </div>
             
       <div className="resCard">
-        
+                                                                       
           
         {/* {console.log(filterRes)} */}
         {filterRes.map((restaurant) => (
