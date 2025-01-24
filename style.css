@@ -25,11 +25,22 @@
     display: flex;
     justify-content: space-between;
     border: solid black 1px;
-    margin: 0px 10px;   
+    margin: 0px ;   
     align-items: center;
 }
+.headingDiv {
+    display: flex;
+    justify-content: space-between;
+    border: solid black 1px;
+    margin: 0px;   
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+    background-color: white; /* Optional: Ensure a clean background */
+}
+
+
 .logoDiv {
-    margin-left: 20px;
+    margin-left: 50px;
     display: flex;
     align-items: center;
 }

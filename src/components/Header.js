@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import logoImg from "../../Images/logoImg.png";
+import YumRunLogo from "../../Images/YumRunLogo.png";
 import { Link } from "react-router-dom";
 
 
@@ -8,10 +8,10 @@ const Heading = () => {
   const cardItems = useSelector((store) => store.cart.items);
 
   return (
-    <div className="headingDiv">
+    <div className="headingDiv w-full">
       <div className="logoDiv">
-        <img src={logoImg} className="logo" />
-        <h3>YumRun</h3>
+        <img src={YumRunLogo} className="logo rounded-full w-16 h-16" />
+        <h3 className="font-semibold">YumRun</h3>
       </div>
       <div className="navItems">
         <ul>
