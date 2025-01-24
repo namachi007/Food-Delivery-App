@@ -114,7 +114,7 @@ console.log(inputText);
           </p>
         </div>
       </div>
-      <div className="flex justify-center w-11.5/12 mb-16">
+      <div className="flex justify-center w-11.5/12 ">
         <div className="thin-line"></div>
       </div>
       <div>

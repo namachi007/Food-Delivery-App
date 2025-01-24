@@ -42,7 +42,7 @@ const Rescard = (props) => {
           <h3 className="text-lg font-bold">{name}</h3>
         </div>
         <div>
-          <h4 className="contnt inline-flex items-center text-md">
+          <h4 className="contnt inline-flex items-center text-md font-semibold">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
