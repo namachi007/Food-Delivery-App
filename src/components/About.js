@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const About = () => {
@@ -13,7 +14,6 @@ const About = () => {
         </p>
       </div>
 
-  
       <div className="story-section w-full max-w-5xl mb-10 bg-white shadow-lg rounded-lg p-8">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Story</h2>
         <p className="text-gray-600">
@@ -25,9 +25,7 @@ const About = () => {
         </p>
       </div>
 
-     
       <div className="mission-vision-section w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-       
         <div className="mission bg-white shadow-lg rounded-lg p-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
           <p className="text-gray-600">
@@ -35,7 +33,7 @@ const About = () => {
             delivering happiness in every bite.
           </p>
         </div>
-    
+
         <div className="vision bg-white shadow-lg rounded-lg p-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>
           <p className="text-gray-600">
@@ -45,7 +43,6 @@ const About = () => {
         </div>
       </div>
 
-      
       <div className="features-section w-full max-w-5xl mb-10">
         <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
           Why Choose YumRun?
@@ -110,9 +107,11 @@ const About = () => {
         <p className="text-gray-600 mb-6">
           Join the YumRun family and start exploring the best food around you!
         </p>
-        <button className="px-6 py-3 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition duration-300">
-          Explore Now
-        </button>
+        <Link to={"/"} className="text-orange-500 hover:underline">
+          <button className="px-6 py-3 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition duration-300">
+            Explore Now
+          </button>
+        </Link>
       </div>
     </div>
   );
