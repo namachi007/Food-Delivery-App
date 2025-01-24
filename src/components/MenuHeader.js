@@ -13,10 +13,10 @@ const menuHeader = (props) => {
     return (
       <div className="menuHeader2">
         <div className="menuResName">
-          <h2 className="font-extrabold text-3xl">{restaurantName}</h2>
+          <h2 className="font-extrabold text-2xl">{restaurantName}</h2>
         </div>
         <div className="menuResInfo  p-10">
-          <h5 className="inline-flex items-center font-bold text-lg">
+          <h5 className="inline-flex items-center font-bold text-md">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -29,8 +29,8 @@ const menuHeader = (props) => {
             </svg>
             {avgRatingString}({totalRatingsString}) ● {costForTwoMessage}
           </h5>
-          <h5 className="my-6 text-lg">{cuisines.join(", ")}</h5>
-          <h5 className="text-lg">{sla.slaString}</h5>
+          <h5 className="my-6 text-md">{cuisines.join(", ")}</h5>
+          <h5 className="text-md">{sla.slaString}</h5>
         </div>
       </div>
     );

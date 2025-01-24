@@ -2,8 +2,13 @@ const ShimmerDiv = () => {
     return (
       <div>
         <div className="mainSearch">
-          <div className="serachBox">
-            <input placeholder="Search for restaurant and food"></input>
+          <div className="serachBox ">
+            <input
+              data-testid="searchInput"
+              type="text"
+              placeholder="  Search for restaurant and food"
+              className="p-3 text-lg"
+            ></input>
             <div className="logoSearchsvg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -36,21 +41,14 @@ const ShimmerDiv = () => {
               </div>
             </div>
           </div>
-          <div className="sortbtnDiv">
-            <button
-              className="sortbtn"
-              onClick={() => {
-                const filteredrestaurant = resList.filter(
-                  (resElement) => resElement.info.avgRating > 4.5
-                );
-                filteredList(filteredrestaurant);
-              }}
-            >
-              restaurant above 4 rating
-            </button>
-          </div>
+          {/*  */}
         </div>
 
+        <div className="banner flex justify-center mt-12 mb-16 w-11.5/12 ">
+          
+            <div className="shimmerUI"></div>
+      
+        </div>
         <div className="shimmerInner">
           <div className="shimmerdiv">
             <div className="shimmerImg"></div>
@@ -112,7 +110,6 @@ const ShimmerDiv = () => {
             <div className="shimmerName"></div>
             <div className="shimmerContent"></div>
           </div>
-          
         </div>
       </div>
     );

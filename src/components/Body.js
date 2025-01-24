@@ -24,11 +24,18 @@ const Body = () => {
     );
 
     const json = await data.json();
+     const filterData = json.data.cards.filter(
+       (cart) =>
+         cart.card?.card?.gridElements?.infoWithStyle["@type"] ===
+         "type.googleapis.com/swiggy.presentation.food.v2.FavouriteRestaurantInfoWithStyle"
+     );
+
+    // console.log(json);
     filteredList(
-      json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
+      filterData[0].card.card.gridElements.infoWithStyle.restaurants
     );
     setfilterRes(
-      json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
+      filterData[0].card.card.gridElements.infoWithStyle.restaurants
     );
   };
 console.log(inputText);
@@ -52,11 +59,13 @@ console.log(inputText);
       <div className="mainSearch">
         <div className="serachBox">
           <input
+            data-testid="searchInput"
             type="text"
             placeholder="  Search for restaurant and food"
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
             onKeyDown={handleKeyDown}
+            className="p-3 text-lg"
           ></input>
           <div className="logoSearchsvg">
             <svg
@@ -64,15 +73,14 @@ console.log(inputText);
               width="18"
               height="18"
               fill="currentColor"
-              class="bi bi-search"
               viewBox="0 0 16 16"
             >
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
             </svg>
           </div>
 
-          <div class="sortBy">
-            <div class="innerSortby">Sort By</div>
+          <div className="sortBy">
+            <div className="innerSortby">Sort By</div>
             <div className="innersortSvg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -90,24 +98,61 @@ console.log(inputText);
             </div>
           </div>
         </div>
-        <div className="sortbtnDiv">
-          {/* <button
-            className="sortbtn"
-            onClick={() => {
-              const filteredrestaurant = listOfRes.filter(
-                (resElement) => resElement.info.avgRating > 4.5
-              );
-              setfilterRes(filteredrestaurant);
-            }}
-          >
-            restaurant above 4 rating
-          </button> */}
+      </div>
+
+      <div className="banner flex justify-center mt-12 mb-16 w-11.5/12 ">
+        <div className="bannerImg">
+          <img
+            className=" h-[380px]"
+            src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/seo/DO_collectionBanner.png"
+          />
+        </div>
+        <div className="absolute text-white font-bold text-[30px] mt-[200px] mr-[820px] mb-32">
+          <p className="shadow-white justify-start text-red-50">
+            Order Food Online in
+            <br /> Chennai
+          </p>
         </div>
       </div>
-            
+      <div className="flex justify-center w-11.5/12 mb-16">
+        <div className="thin-line"></div>
+      </div>
+      <div>
+        <div className="flex space-x-4 justify-center mt-6">
+          <div className="flex space-x-4 justify-center mt-6">
+            <button
+              className="border border-black text-black px-6 py-2 rounded-full font-semibold hover:bg-gray-200"
+              onClick={() => {
+                const filteredrestaurant = listOfRes.filter(
+                  (resElement) => resElement.info.avgRating > 4.5
+                );
+                setfilterRes(filteredrestaurant);
+              }}
+            >
+              Sort 4+ Rating
+            </button>
+            <button className="border border-black text-black px-3 py-1 rounded-full font-semibold hover:bg-gray-200">
+              Book a Table
+            </button>
+            <button className="border border-black text-black px-3 py-1 rounded-full  font-medium hover:bg-gray-200">
+              Within 5km 4+ Rating
+            </button>
+            <button className="border border-black text-black px-3 py-1 rounded-full  font-medium hover:bg-gray-200">
+              Sort by Price
+            </button>
+            <button className="border border-black text-black px-3 py-1 rounded-full  font-medium hover:bg-gray-200">
+              Show Nearby
+            </button>
+            <button className="border border-black text-black px-3 py-1 rounded-full  font-medium hover:bg-gray-200">
+              Popular Choices
+            </button>
+            <button className="border border-black text-black px-3 py-1 rounded-full  font-medium hover:bg-gray-200">
+              New Arrivals
+            </button>
+          </div>
+        </div>
+      </div>
       <div className="resCard">
-                                                                       
-          
         {/* {console.log(filterRes)} */}
         {filterRes.map((restaurant) => (
           <Link

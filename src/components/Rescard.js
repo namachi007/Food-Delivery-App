@@ -29,7 +29,7 @@ const Rescard = (props) => {
 
 
   return (
-    <div className="rescardMain">
+    <div className="rescardMain w-[]" data-testid="rescard">
       <div className="rescardImg" style={containerStyle}>
         <img
           src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${cloudinaryImageId}`}
@@ -39,10 +39,10 @@ const Rescard = (props) => {
       </div>
       <div className="resContent">
         <div>
-          <h3 className="text-xl font-bold">{name}</h3>
+          <h3 className="text-lg font-bold">{name}</h3>
         </div>
         <div>
-          <h4 className="contnt inline-flex items-center text-lg">
+          <h4 className="contnt inline-flex items-center text-md">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -56,7 +56,7 @@ const Rescard = (props) => {
             Rating: {avgRating} ● {sla.slaString}{" "}
           </h4>
         </div>
-        <div className="contnt text-md">
+        <div className="contnt ">
           <p>{cuisines.join(", ")}</p>
         </div>
         <div className="contnt contnt1">

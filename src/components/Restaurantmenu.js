@@ -6,16 +6,17 @@ import RestaurantItems from "./RestaurantItems";
 
 const Restaurantmenu = () => {
   const [resMenu, setResmenu] = useState(null);
-  const [isMenuVisible, setIsMenuVisible] = useState(true);
+  const [showIndex, setShowIndex] = useState(0);
 
   let { resId } = useParams();
-  // console.log(resId);
 
-  // resId = "435682";
-  // console.log(resId);
   useEffect(() => {
     fetchCall();
   }, []);
+
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[]);
 
   const fetchCall = async () => {
     const fdata = await fetch(
@@ -54,7 +55,7 @@ const Restaurantmenu = () => {
       </div>
       <div className="menuBody">
         <div className="menuBody2">
-          <div className="menuBodyHead text-xl ">
+          <div className="menuBodyHead text-lg ">
             <h4>-- M E N U --</h4>
           </div>
         </div>
@@ -62,15 +63,18 @@ const Restaurantmenu = () => {
       <div className="menuserachBox">
         <input type="text" placeholder="Search for dishes"></input>
       </div>
-      <div class="thin-line"></div>
+      <div className="thin-line"></div>
       <div className="menuRes">
         <div className="menuRes1 flex flex-wrap">
           {ResData.filter(
             (item) => item?.card?.card?.["@type"] == typeOfHeading
-          ).map((item) => (
+          ).map((item, index) => (
             <RestaurantItems
+            key={index}
               data={item.card.card.itemCards}
               dataTitle={item.card.card.title}
+              showItems={ index === showIndex ? true : false}
+              setShowIndex={() => setShowIndex(index === showIndex ? null : index )}
             />
           ))}
         </div>

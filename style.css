@@ -248,8 +248,8 @@
 .logoSearchsvg {
     
     position: absolute;
-    /* right: 25.5%;
-    top: 21.5%; */
+    right: 20.0%;
+    top: 23%;
 }
 .innersortSvg {
     margin-left: 10px;
@@ -271,6 +271,14 @@
     margin: 34px 50px;
     
 }
+
+.shimmerUI {
+    background-color: rgb(225, 224, 223);
+    width: 1200px;
+    height: 350px;
+    border-radius: 20px;
+}
+
 .shimmerdiv > * {
     background-color:rgb(225, 224, 223)
 }
@@ -359,7 +367,7 @@
 .menuserachBox {
     margin: 30px 0px;
     width: 100%;
-    margin-left: 567px;
+    margin-left: 380px;
 }
 
 .menuserachBox > input  { 
@@ -378,6 +386,12 @@
     color: #aaa;
     font-size: 15px;
     
+}
+
+.no-select {
+  user-select: none; 
+  -webkit-user-select: none; 
+  -ms-user-select: none; 
 }
 
 .menuserachBox {
@@ -542,7 +556,7 @@
 }
 .menuImg > img {
     width: 170px;
-    height: 170px;
+    height: 150px;
     border-radius: 12px;
    margin-top: 20px;
 }

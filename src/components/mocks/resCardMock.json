@@ -1,0 +1,1035 @@
+{
+  "card": {
+    "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+    "info": {
+      "id": "153328828",
+      "name": "Margherita Cheese Burst",
+      "category": "Cheese Burst - 3 New Flavours",
+      "description": "Now in 3 New Flavours - Molten Cheese Indulgence with delight of 100% real mozzarella cheese",
+      "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/10/17/ccc30e06-ab70-45b6-9825-adf3150441af_3f3d3a2e-855b-4158-bcec-7615525e44b0.jpg",
+      "inStock": 1,
+      "isVeg": 1,
+      "variants": {},
+      "variantsV2": {
+        "variantGroups": [
+          {
+            "groupId": "49609820",
+            "name": "Crust",
+            "variations": [
+              {
+                "name": "Korean Sweet Chilli Cheese Burst",
+                "id": "155625192",
+                "inStock": 1,
+                "isVeg": 1,
+                "isEnabled": 1,
+                "dependantVariation": {
+                  "groupId": "49609821",
+                  "variationId": "155625196"
+                }
+              },
+              {
+                "name": "Cheese Burst",
+                "default": 1,
+                "id": "155625193",
+                "inStock": 1,
+                "isVeg": 1,
+                "isEnabled": 1,
+                "dependantVariation": {
+                  "groupId": "49609821",
+                  "variationId": "155625196"
+                }
+              },
+              {
+                "name": "Hot n Fiery Cheese Burst",
+                "id": "155625194",
+                "inStock": 1,
+                "isVeg": 1,
+                "isEnabled": 1,
+                "dependantVariation": {
+                  "groupId": "49609821",
+                  "variationId": "155625196"
+                }
+              },
+              {
+                "name": "Creamy Makhani Cheese Burst",
+                "id": "155625195",
+                "inStock": 1,
+                "isVeg": 1,
+                "isEnabled": 1,
+                "dependantVariation": {
+                  "groupId": "49609821",
+                  "variationId": "155625196"
+                }
+              }
+            ]
+          },
+          {
+            "groupId": "49609821",
+            "name": "Size",
+            "variations": [
+              {
+                "name": "Regular",
+                "default": 1,
+                "id": "155625196",
+                "inStock": 1,
+                "isVeg": 1,
+                "isEnabled": 1
+              },
+              {
+                "name": "Medium",
+                "id": "155625197",
+                "inStock": 1,
+                "isVeg": 1,
+                "isEnabled": 1
+              }
+            ]
+          }
+        ],
+        "pricingModels": [
+          {
+            "variations": [
+              {
+                "groupId": "49609820",
+                "variationId": "155625193"
+              },
+              {
+                "groupId": "49609821",
+                "variationId": "155625196"
+              }
+            ],
+            "price": 18400,
+            "addonCombinations": [
+              {
+                "groupId": "180856884",
+                "addonId": "99998334"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998338"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998341"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998332"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998339"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998313"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998331"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998317"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998318"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998314"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998309"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998342"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998328"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998330"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998351"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998312"
+              }
+            ]
+          },
+          {
+            "variations": [
+              {
+                "groupId": "49609820",
+                "variationId": "155625193"
+              },
+              {
+                "groupId": "49609821",
+                "variationId": "155625197"
+              }
+            ],
+            "price": 33800,
+            "addonCombinations": [
+              {
+                "groupId": "180856891",
+                "addonId": "99998320"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998315"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998319"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998344"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998311"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998326"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998336"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998350"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998349"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998347"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998310"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998327"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998308"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998346"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998335"
+              },
+              {
+                "groupId": "180856890",
+                "addonId": "99998316"
+              }
+            ]
+          },
+          {
+            "variations": [
+              {
+                "groupId": "49609820",
+                "variationId": "155625194"
+              },
+              {
+                "groupId": "49609821",
+                "variationId": "155625196"
+              }
+            ],
+            "price": 18400,
+            "addonCombinations": [
+              {
+                "groupId": "180856884",
+                "addonId": "99998334"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998338"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998341"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998332"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998339"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998313"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998331"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998317"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998318"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998314"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998309"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998342"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998328"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998330"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998351"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998312"
+              }
+            ]
+          },
+          {
+            "variations": [
+              {
+                "groupId": "49609820",
+                "variationId": "155625194"
+              },
+              {
+                "groupId": "49609821",
+                "variationId": "155625197"
+              }
+            ],
+            "price": 33800,
+            "addonCombinations": [
+              {
+                "groupId": "180856891",
+                "addonId": "99998320"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998315"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998319"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998344"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998311"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998326"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998336"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998350"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998349"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998347"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998310"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998327"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998308"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998346"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998335"
+              },
+              {
+                "groupId": "180856890",
+                "addonId": "99998316"
+              }
+            ]
+          },
+          {
+            "variations": [
+              {
+                "groupId": "49609820",
+                "variationId": "155625195"
+              },
+              {
+                "groupId": "49609821",
+                "variationId": "155625196"
+              }
+            ],
+            "price": 18400,
+            "addonCombinations": [
+              {
+                "groupId": "180856884",
+                "addonId": "99998334"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998338"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998341"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998332"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998339"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998313"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998331"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998317"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998318"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998314"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998309"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998342"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998328"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998330"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998351"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998312"
+              }
+            ]
+          },
+          {
+            "variations": [
+              {
+                "groupId": "49609820",
+                "variationId": "155625195"
+              },
+              {
+                "groupId": "49609821",
+                "variationId": "155625197"
+              }
+            ],
+            "price": 33800,
+            "addonCombinations": [
+              {
+                "groupId": "180856891",
+                "addonId": "99998320"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998315"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998319"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998344"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998311"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998326"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998336"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998350"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998349"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998347"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998310"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998327"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998308"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998346"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998335"
+              },
+              {
+                "groupId": "180856890",
+                "addonId": "99998316"
+              }
+            ]
+          },
+          {
+            "variations": [
+              {
+                "groupId": "49609820",
+                "variationId": "155625192"
+              },
+              {
+                "groupId": "49609821",
+                "variationId": "155625196"
+              }
+            ],
+            "price": 18400,
+            "addonCombinations": [
+              {
+                "groupId": "180856884",
+                "addonId": "99998334"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998338"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998341"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998332"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998339"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998313"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998331"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998317"
+              },
+              {
+                "groupId": "180856889",
+                "addonId": "99998318"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998314"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998309"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998342"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998328"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998330"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998351"
+              },
+              {
+                "groupId": "180856886",
+                "addonId": "99998312"
+              }
+            ]
+          },
+          {
+            "variations": [
+              {
+                "groupId": "49609820",
+                "variationId": "155625192"
+              },
+              {
+                "groupId": "49609821",
+                "variationId": "155625197"
+              }
+            ],
+            "price": 33800,
+            "addonCombinations": [
+              {
+                "groupId": "180856891",
+                "addonId": "99998320"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998315"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998319"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998344"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998311"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998326"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998336"
+              },
+              {
+                "groupId": "180856891",
+                "addonId": "99998350"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998349"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998347"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998310"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998327"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998308"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998346"
+              },
+              {
+                "groupId": "180856892",
+                "addonId": "99998335"
+              },
+              {
+                "groupId": "180856890",
+                "addonId": "99998316"
+              }
+            ]
+          }
+        ]
+      },
+      "addons": [
+        {
+          "groupId": "180856884",
+          "groupName": "Extra Cheese Regular",
+          "choices": [
+            {
+              "id": "99998334",
+              "name": "Extra Cheese",
+              "price": 5000,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            }
+          ],
+          "maxAddons": -1,
+          "maxFreeAddons": -1
+        },
+        {
+          "groupId": "180856886",
+          "groupName": "Non-Veg Toppings Regular",
+          "choices": [
+            {
+              "id": "99998314",
+              "name": "Peri - Peri Chicken",
+              "price": 5000,
+              "inStock": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998309",
+              "name": "Pepper Barbecue Chicken",
+              "price": 5000,
+              "inStock": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998342",
+              "name": "Chicken Sausage",
+              "price": 5000,
+              "inStock": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998328",
+              "name": "Grilled Chicken Rasher",
+              "price": 5000,
+              "inStock": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998330",
+              "name": "Chicken Keema",
+              "price": 5000,
+              "inStock": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998351",
+              "name": "Chicken Tikka",
+              "price": 5000,
+              "inStock": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998312",
+              "name": "Chicken Pepperoni",
+              "price": 5000,
+              "inStock": 1,
+              "isEnabled": 1
+            }
+          ],
+          "maxAddons": -1,
+          "maxFreeAddons": -1
+        },
+        {
+          "groupId": "180856889",
+          "groupName": "Veg Toppings Regular",
+          "choices": [
+            {
+              "id": "99998338",
+              "name": "Black Olive",
+              "price": 3500,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998341",
+              "name": "Grilled Mushrooms",
+              "price": 3500,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998332",
+              "name": "Onion",
+              "price": 3500,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998339",
+              "name": "Crisp Capsicum",
+              "price": 3500,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998313",
+              "name": "Fresh Tomato",
+              "price": 3500,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998331",
+              "name": "Red Pepper",
+              "price": 3500,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998317",
+              "name": "Paneer",
+              "price": 3500,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998318",
+              "name": "Jalapeno",
+              "price": 3500,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            }
+          ],
+          "maxAddons": -1,
+          "maxFreeAddons": -1
+        },
+        {
+          "groupId": "180856890",
+          "groupName": "Extra Cheese Medium",
+          "choices": [
+            {
+              "id": "99998316",
+              "name": "Extra Cheese",
+              "price": 7500,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            }
+          ],
+          "maxAddons": -1,
+          "maxFreeAddons": -1
+        },
+        {
+          "groupId": "180856891",
+          "groupName": "Veg Toppings Medium",
+          "choices": [
+            {
+              "id": "99998320",
+              "name": "Onion",
+              "price": 6000,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998315",
+              "name": "Black Olive",
+              "price": 6000,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998319",
+              "name": "Grilled Mushrooms",
+              "price": 6000,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998344",
+              "name": "Fresh Tomato",
+              "price": 6000,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998311",
+              "name": "Crisp Capsicum",
+              "price": 6000,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998326",
+              "name": "Paneer",
+              "price": 6000,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998336",
+              "name": "Jalapeno",
+              "price": 6000,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998350",
+              "name": "Red Pepper",
+              "price": 6000,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            }
+          ],
+          "maxAddons": -1,
+          "maxFreeAddons": -1
+        },
+        {
+          "groupId": "180856892",
+          "groupName": "Non-Veg Toppings Medium",
+          "choices": [
+            {
+              "id": "99998349",
+              "name": "Pepper Barbecue Chicken",
+              "price": 7500,
+              "inStock": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998347",
+              "name": "Grilled Chicken Rasher",
+              "price": 7500,
+              "inStock": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998310",
+              "name": "Chicken Keema",
+              "price": 7500,
+              "inStock": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998327",
+              "name": "Peri - Peri Chicken",
+              "price": 7500,
+              "inStock": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998308",
+              "name": "Chicken Tikka",
+              "price": 7500,
+              "inStock": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998346",
+              "name": "Chicken Sausage",
+              "price": 7500,
+              "inStock": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "99998335",
+              "name": "Chicken Pepperoni",
+              "price": 7500,
+              "inStock": 1,
+              "isEnabled": 1
+            }
+          ],
+          "maxAddons": -1,
+          "maxFreeAddons": -1
+        }
+      ],
+      "itemAttribute": {
+        "vegClassifier": "VEG"
+      },
+      "defaultPrice": 18400,
+      "ribbon": {},
+      "showImage": true,
+      "itemBadge": {},
+      "badgesV2": {},
+      "ratings": {
+        "aggregatedRating": {
+          "rating": "5.0",
+          "ratingCount": "3 ratings",
+          "ratingCountV2": "3"
+        }
+      },
+      "itemPriceStrikeOff": true
+    },
+    "analytics": {},
+    "hideRestaurantDetails": true
+  }
+}

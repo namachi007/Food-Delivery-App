@@ -1,12 +1,17 @@
 import VegOrNonveg from "./VegOrNonveg";
+import {useDispatch} from "react-redux";
+import {addItems} from "../utils/cartSlice";
+import { useEffect, useState } from "react";
 
 const ResBody = (params) => {
   const { resMenu } = params;
-
+  console.log(resMenu);
 
   //  console.log(resMenu);
   
   //  console.log(val);
+
+
   
 
   const {
@@ -21,18 +26,47 @@ const ResBody = (params) => {
 
   const { rating, ratingCountV2 } = ratings?.aggregatedRating;
 
+  const dispatch = useDispatch();
+
+    const handleAddItems = (item) => {
+      const itemWithQuantity = { ...item, quantity }; 
+      dispatch(addItems(itemWithQuantity));
+      const displayPrice = finalPrice || price || fixedPrice || 200;
+      dispatch(addItems({ ...item, displayPrice, quantity }));
+    };
+    const [quantity, setQuantity] = useState(1);
+    
+    const increaseQuantity = () => setQuantity(quantity + 1);
+
+   
+    const decreaseQuantity = () => {
+      if (quantity > 1) setQuantity(quantity - 1); 
+    };
+
+const [fixedPrice, setFixedPrice] = useState(null);
+
+useEffect(() => {
+  if (!finalPrice && !price) {
+    const randomPrice = Math.floor(Math.random() * (500 - 201 + 1)) * 201;
+    setFixedPrice(randomPrice);
+  }
+}, [finalPrice, price]);
+
+
+const displayPrice = finalPrice || price || fixedPrice || 200;
+
   return (
     <div className="menuRes3">
       <div className="thin-line1"></div>
       <div className="menuItems ">
         <div className="menuDetails">
           <VegOrNonveg isVeg={isVeg} />
-          <h3 className="menuitemName my-3">{menuItemName}</h3>
-          <h4 className="menuPrice text-lg font-bold">
-            ₹ {(finalPrice ?? price) / 100}
+          <h3 className="menuitemName my-3 text-lg">{menuItemName}</h3>
+          <h4 className="menuPrice text-md font-bold">
+            ₹ {displayPrice / 100}
           </h4>
           {rating != null && (
-            <h4 className="menuRating inline-flex items-center mt-2 text-lg">
+            <h4 className="menuRating inline-flex items-center mt-2 text-md/[10px] font-semibold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="12"
@@ -47,7 +81,7 @@ const ResBody = (params) => {
               {"   " + rating} <span> ({ratingCountV2})</span>
             </h4>
           )}
-          <p className="menuDes my-8 text-lg font-semibold">{description}</p>
+          <p className="menuDes my-8 text-sm font-semibold">{description}</p>
         </div>
         <div className="">
           <div className="menuImg">
@@ -59,7 +93,27 @@ const ResBody = (params) => {
             ></img>
           </div>
           <div className="absolute">
-            <button className="bg-slate-200 hover:bg-slate-300 w-24 h-10 ml-10 rounded-lg  shadow-lg text-lg font-semibold text-green-500 ">ADD</button>
+            <div className="flex items-center justify-center space-x-2 mt-4 ml-9">
+              <button
+                className="bg-slate-200 hover:bg-slate-300 w-8 h-8 rounded-lg shadow-lg text-lg font-semibold text-green-500"
+                onClick={decreaseQuantity}
+              >
+                -
+              </button>
+              <span className="text-lg font-semibold">{quantity}</span>
+              <button
+                className="bg-slate-200 hover:bg-slate-300 w-8 h-8 rounded-lg shadow-lg text-lg font-semibold text-green-500"
+                onClick={increaseQuantity}
+              >
+                +
+              </button>
+            </div>
+            <button
+              className="bg-slate-200 hover:bg-slate-300 w-24 h-10 ml-10 rounded-lg shadow-lg text-lg font-semibold text-green-500 mt-4"
+              onClick={() => handleAddItems(resMenu.card?.info)}
+            >
+              ADD
+            </button>
           </div>
         </div>
       </div>
