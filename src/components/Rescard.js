@@ -22,8 +22,6 @@ const Rescard = (props) => {
   const imageStyle = {
     position: 'absolute',
     bottom: '1%', 
-    // right: '11%',
-    
     width: '100%',
   };
 

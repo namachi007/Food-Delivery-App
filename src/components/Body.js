@@ -139,19 +139,35 @@ console.log(inputText);
                 setfilterRes(filteredrestaurant);
               }}
             >
-              Sort 4+ Rating
+              Sort 4.5+ Rating
             </button>
-            <button className="border border-black text-black px-3 py-1 rounded-full font-semibold hover:bg-gray-200">
-              Book a Table
+            <button
+              className="border border-black text-black px-3 py-1 rounded-full font-semibold hover:bg-gray-200"
+              onClick={() => {
+                const filteredrestaurant = listOfRes.filter(
+                  (resElement) => resElement.info.sla.lastMileTravel < 2
+                );
+                setfilterRes(filteredrestaurant);
+              }}
+            >
+              Within 2km
             </button>
-            <button className="border border-black text-black px-3 py-1 rounded-full  font-medium hover:bg-gray-200">
+            <button
+              className="border border-black text-black px-3 py-1 rounded-full  font-medium hover:bg-gray-200"
+              onClick={() => {
+                const filteredrestaurant = listOfRes.filter(
+                  (resElement) => resElement.info.sla.lastMileTravel < 5 && resElement.info.avgRating > 4
+                );
+                setfilterRes(filteredrestaurant);
+              }}
+            >
               Within 5km 4+ Rating
             </button>
             <button className="border border-black text-black px-3 py-1 rounded-full  font-medium hover:bg-gray-200">
               Sort by Price
             </button>
             <button className="border border-black text-black px-3 py-1 rounded-full  font-medium hover:bg-gray-200">
-              Show Nearby
+              Book a Table
             </button>
             <button className="border border-black text-black px-3 py-1 rounded-full  font-medium hover:bg-gray-200">
               Popular Choices
