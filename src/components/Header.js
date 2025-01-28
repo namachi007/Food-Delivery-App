@@ -11,7 +11,7 @@ const Heading = () => {
     <div className="headingDiv w-full">
       <div className="logoDiv">
         <img src={YumRunLogo} className="logo rounded-full w-16 h-16" />
-        <h3 className="font-semibold">YumRun</h3>
+        <h3 className="font-semibold text-orange-500">YumRun</h3>
       </div>
       <div className="navItems">
         <ul>

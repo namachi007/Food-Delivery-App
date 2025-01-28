@@ -99,7 +99,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Call to Action */}
       <div className="cta-section w-full max-w-5xl text-center">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">
           Ready to Savor Your Next Meal?

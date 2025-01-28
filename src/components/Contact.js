@@ -103,7 +103,7 @@ const Contact = () => {
               className="rounded-full w-16 h-16"
             />
             <h3 className="text-lg font-semibold text-gray-800">Email</h3>
-            <p className="text-gray-600">support@yumrun.com</p>
+            <p className="text-gray-600">iamnamachu31@gmail.com</p>
           </div>
 
           <div className="flex flex-col items-center mt-4">
@@ -118,7 +118,7 @@ const Contact = () => {
               <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
             </svg>
             <h3 className="text-lg font-semibold text-gray-800">Address</h3>
-            <p className="text-gray-600">Tamil Nadu, India</p>
+            <p className="text-gray-600">India</p>
           </div>
         </div>
       </div>

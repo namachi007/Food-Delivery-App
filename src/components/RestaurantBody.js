@@ -7,13 +7,6 @@ const ResBody = (params) => {
   const { resMenu } = params;
   console.log(resMenu);
 
-  //  console.log(resMenu);
-  
-  //  console.log(val);
-
-
-  
-
   const {
     name: menuItemName,
     isVeg,
@@ -28,12 +21,14 @@ const ResBody = (params) => {
 
   const dispatch = useDispatch();
 
-    const handleAddItems = (item) => {
-      const itemWithQuantity = { ...item, quantity }; 
-      dispatch(addItems(itemWithQuantity));
-      const displayPrice = finalPrice || price || fixedPrice || 200;
-      dispatch(addItems({ ...item, displayPrice, quantity }));
-    };
+   const handleAddItems = (item) => {
+     const itemWithPriceAndQuantity = {
+       ...item,
+       displayPrice: finalPrice || price || fixedPrice || 200,
+       quantity,
+     };
+     dispatch(addItems(itemWithPriceAndQuantity));
+   };
     const [quantity, setQuantity] = useState(1);
     
     const increaseQuantity = () => setQuantity(quantity + 1);
@@ -47,8 +42,8 @@ const [fixedPrice, setFixedPrice] = useState(null);
 
 useEffect(() => {
   if (!finalPrice && !price) {
-    const randomPrice = Math.floor(Math.random() * (500 - 201 + 1)) * 201;
-    setFixedPrice(randomPrice);
+    const randomPrice = Math.floor(Math.random() * (500 - 201 + 1)) + 201;
+    setFixedPrice(randomPrice * 100);
   }
 }, [finalPrice, price]);
 
