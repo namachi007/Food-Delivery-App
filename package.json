@@ -6,7 +6,8 @@
   "scripts": {
     "start": "parcel index.html",
     "test": "jest",
-    "watch-test": "jest --watchw"
+    "watch-test": "jest --watchw",
+    "build": "parcel build index.html"
   },
   "author": "Namasivayam M",
   "license": "ISC",
