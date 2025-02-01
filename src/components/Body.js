@@ -89,7 +89,7 @@ console.log(inputText);
             </svg>
           </div>
 
-          <div className="sortBy">
+          <div className="sortBy ">
             <div className="innerSortby">Sort By</div>
             <div className="innersortSvg">
               <svg

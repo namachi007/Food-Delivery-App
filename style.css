@@ -257,10 +257,10 @@
     
 }
 .logoSearchsvg {
-    
+    margin-left: 900px;
+    margin-top: 16px;
     position: absolute;
-    right: 20.0%;
-    top: 16%;
+   
 }
 .innersortSvg {
     margin-left: 10px;
