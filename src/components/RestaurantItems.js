@@ -3,16 +3,10 @@ import { useState } from "react";
 
 const RestaurantItems = (props) => {
   const { data, dataTitle, showItems, setShowIndex } = props;
-//   console.log(data);
-//   console.log(dataTitle);
 
-    
-
-    const handleOnClick = () => {
-      setShowIndex();
-    }
-
-
+  const handleOnClick = () => {
+    setShowIndex();
+  };
 
   return (
     <div className="resItemIn">
@@ -31,9 +25,10 @@ const RestaurantItems = (props) => {
           </div>
         </div>
 
-        {showItems && data.map((item) => <ResBody 
-        key={item.card.info.id}
-        resMenu={item} />)}
+        {showItems &&
+          data.map((item) => (
+            <ResBody key={item.card.info.id} resMenu={item} />
+          ))}
       </div>
     </div>
   );

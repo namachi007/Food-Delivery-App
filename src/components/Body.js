@@ -5,13 +5,11 @@ import { useEffect } from "react";
 import ShimmerDiv from "./Shimmer";
 import { Link } from "react-router-dom";
 
-
 const Body = () => {
   const [listOfRes, filteredList] = useState([]);
   const [filterRes, setfilterRes] = useState([]);
 
-
-  const [inputText , setInputText] = useState("");
+  const [inputText, setInputText] = useState("");
   const [submittedText, setSubmittedText] = useState("");
 
   useEffect(() => {
@@ -19,16 +17,11 @@ const Body = () => {
   }, []);
 
   const fetchApi = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999"
+    const filterData = resList.data.cards.filter(
+      (cart) =>
+        cart.card?.card?.gridElements?.infoWithStyle["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.FavouriteRestaurantInfoWithStyle"
     );
-
-    const json = await data.json();
-     const filterData = json.data.cards.filter(
-       (cart) =>
-         cart.card?.card?.gridElements?.infoWithStyle["@type"] ===
-         "type.googleapis.com/swiggy.presentation.food.v2.FavouriteRestaurantInfoWithStyle"
-     );
 
     // console.log(json);
     filteredList(
@@ -38,13 +31,14 @@ const Body = () => {
       filterData[0].card.card.gridElements.infoWithStyle.restaurants
     );
   };
-console.log(inputText);
   const handleKeyDown = (event) => {
     console.log("Entered");
-    if(event.key === "Enter") {
+    if (event.key === "Enter") {
       setSubmittedText(inputText);
-      const submitList = listOfRes.filter( (res) => res.info.name.toLowerCase().includes(inputText.toLowerCase()) );
-      
+      const submitList = listOfRes.filter((res) =>
+        res.info.name.toLowerCase().includes(inputText.toLowerCase())
+      );
+
       setfilterRes(submitList);
       setInputText("");
     }
@@ -58,10 +52,9 @@ console.log(inputText);
     setInputText("");
   };
 
-
-    if (listOfRes.length == 0) {
-    return  < ShimmerDiv />;
-    }
+  if (listOfRes.length == 0) {
+    return <ShimmerDiv />;
+  }
   return (
     <div className="mainBody">
       <div className="mainSearch">
@@ -156,7 +149,9 @@ console.log(inputText);
               className="border border-black text-black px-3 py-1 rounded-full  font-medium hover:bg-gray-200"
               onClick={() => {
                 const filteredrestaurant = listOfRes.filter(
-                  (resElement) => resElement.info.sla.lastMileTravel < 5 && resElement.info.avgRating > 4
+                  (resElement) =>
+                    resElement.info.sla.lastMileTravel < 5 &&
+                    resElement.info.avgRating > 4
                 );
                 setfilterRes(filteredrestaurant);
               }}

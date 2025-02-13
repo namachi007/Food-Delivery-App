@@ -2,10 +2,10 @@ import VegOrNonveg from "./VegOrNonveg";
 import {useDispatch} from "react-redux";
 import {addItems} from "../utils/cartSlice";
 import { useEffect, useState } from "react";
+import resList from "../utils/resList";
 
 const ResBody = (params) => {
   const { resMenu } = params;
-  console.log(resMenu);
 
   const {
     name: menuItemName,

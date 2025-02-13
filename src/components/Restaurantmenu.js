@@ -11,27 +11,33 @@ const Restaurantmenu = () => {
   let { resId } = useParams();
 
   useEffect(() => {
-    fetchCall();
+    loadData();
+    async function loadData() {
+      try {
+        const module = await import("../data/resMenuItems.json");
+        const resMenuItems = module.default;
+        const restaurantMenu = resMenuItems.find((menu) => {
+          return (
+            menu.data?.cards?.[2]?.card?.card?.info?.id?.toString() === resId
+          );
+        });
+
+        if (restaurantMenu) {
+          setResmenu(restaurantMenu.data);
+        } else {
+          console.error("Restaurant menu not found for resId:", resId);
+        }
+      } catch (error) {
+        console.error("Error loading module:", error);
+      }
+    }
+  }, [resId]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
 
-  useEffect(()=>{
-    window.scrollTo(0,0);
-  },[]);
-
-  const fetchCall = async () => {
-    const fdata = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.7040592&lng=77.10249019999999&restaurantId=" +
-        resId
-    );
-
-    const json = await fdata.json();
-    // console.log(json);
-    setResmenu(json.data);
-  };
-
   if (resMenu === null) return <ShimmerMenu />;
-  //  console.log(resMenu?.data?.cards[2].card?.card?.info);
-  
 
   const newResitem =
     resMenu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2].card?.card
@@ -51,7 +57,7 @@ const Restaurantmenu = () => {
   return (
     <div className="menu">
       <div className="menuHeader">
-        <MenuHeader info={resMenu?.cards[2].card?.card?.info}/>
+        <MenuHeader info={resMenu?.cards[2].card?.card?.info} />
       </div>
       <div className="menuBody">
         <div className="menuBody2">
@@ -70,11 +76,13 @@ const Restaurantmenu = () => {
             (item) => item?.card?.card?.["@type"] == typeOfHeading
           ).map((item, index) => (
             <RestaurantItems
-            key={index}
+              key={index}
               data={item.card.card.itemCards}
               dataTitle={item.card.card.title}
-              showItems={ index === showIndex ? true : false}
-              setShowIndex={() => setShowIndex(index === showIndex ? null : index )}
+              showItems={index === showIndex ? true : false}
+              setShowIndex={() =>
+                setShowIndex(index === showIndex ? null : index)
+              }
             />
           ))}
         </div>
